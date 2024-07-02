@@ -11,11 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spes/spesn device
 $(call inherit-product, device/xiaomi/spes/device.mk)
 
-# Inherit some common ProjectBlaze stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+# Inherit some common Project Infinity  stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Product Specifics
-PRODUCT_NAME := blaze_spes
+PRODUCT_NAME := infinity_spes
 PRODUCT_DEVICE := spes
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 11
@@ -26,10 +26,11 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Boot animaton
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Blaze Official Stuff
-BLAZE_BUILD_TYPE := OFFICIAL
-BLAZE_MAINTAINER := sayann70
-TARGET_FACE_UNLOCK_SUPPORTED := true
+# Infinity-X Specific Flags
+INFINITY_BUILD_TYPE := OFFICIAL
+INFINITY_MAINTAINER := JassiV×Sayan
+
+
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
@@ -40,3 +41,10 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 BUILD_FINGERPRINT := "Redmi/spes/spes:13/TKQ1.221114.001/V14.0.5.0.TGCINXM:user/release-keys"
+
+PRODUCT_SYSTEM_NAME := spes_global
+PRODUCT_SYSTEM_DEVICE := spes
+
+# Gapps
+WITH_GAPPS := true
+TARGET_BUILD_GOOGLE_TELEPHONY := true
