@@ -11,11 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spes/spesn device
 $(call inherit-product, device/xiaomi/spes/device.mk)
 
-# Inherit some common Project Infinity  stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+# Inherit some common risingOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Product Specifics
-PRODUCT_NAME := infinity_spes
+PRODUCT_NAME := lineage_spes
 PRODUCT_DEVICE := spes
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 11
@@ -26,11 +26,22 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Boot animaton
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Infinity-X Specific Flags
-INFINITY_BUILD_TYPE := OFFICIAL
-INFINITY_MAINTAINER := JassiV×Sayan
+# RisingOS Flags
+WITH_GMS := true
+# TARGET_CORE_GMS := true
+TARGET_ENABLE_BLUR := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_HAS_UDFPS := false
+TARGET_USE_GOOGLE_TELEPHONY := true
+RISING_MAINTAINER := spesmynuts
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_CHIPSET="Snapdragon 680" \
+    RISING_MAINTAINER="spesmynuts"
 
+# Launcher
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+TARGET_DEFAULT_PIXEL_LAUNCHER := false
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
