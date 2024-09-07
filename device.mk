@@ -21,6 +21,9 @@ ifeq ($(wildcard hardware/xiaomi/Android.bp),)
 $(error Error: cannot found hardware/xiaomi repository, please clone it and try to build again!)
 endif
 
+# JamesDSP
+$(call inherit-product, packages/apps/JamesDSPManager/config.mk)
+
 # Enable Dynamic partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
