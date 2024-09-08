@@ -49,9 +49,6 @@ TARGET_DEFAULT_PIXEL_LAUNCHER := false
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
-# Camera, set to false to build with aperture camera
-PRODUCT_NO_CAMERA := true 
-
 # Fingerprint
 BUILD_FINGERPRINT := "Redmi/spes/spes:13/TKQ1.221114.001/V14.0.5.0.TGCINXM:user/release-keys"
 
