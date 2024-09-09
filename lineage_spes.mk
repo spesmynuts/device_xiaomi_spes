@@ -11,9 +11,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spes/spesn device
 $(call inherit-product, device/xiaomi/spes/device.mk)
 
-# MiuiCamera
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
-
 # Inherit some common risingOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
@@ -31,6 +28,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # RisingOS Flags
 WITH_GMS := true
+PRODUCT_NO_CAMERA := false
 # TARGET_CORE_GMS := true
 TARGET_ENABLE_BLUR := false
 TARGET_SUPPORTS_QUICK_TAP := true
@@ -42,7 +40,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_CHIPSET="Snapdragon 680" \
     RISING_MAINTAINER="spesmynuts"
 
-# Launcher
+# Launchers
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
 TARGET_DEFAULT_PIXEL_LAUNCHER := false
 
@@ -55,6 +53,6 @@ BUILD_FINGERPRINT := "Redmi/spes/spes:13/TKQ1.221114.001/V14.0.5.0.TGCINXM:user/
 PRODUCT_SYSTEM_NAME := spes_global
 PRODUCT_SYSTEM_DEVICE := spes
 
-# Gapps
+# Gapps (Basic)
 WITH_GAPPS := true
 TARGET_BUILD_GOOGLE_TELEPHONY := true
