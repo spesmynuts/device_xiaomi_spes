@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spes/spesn device
 $(call inherit-product, device/xiaomi/spes/device.mk)
 
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
+
 # Inherit some common risingOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
@@ -28,7 +31,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # RisingOS Flags
 WITH_GMS := true
-PRODUCT_NO_CAMERA := false
+PRODUCT_NO_CAMERA := true
 # TARGET_CORE_GMS := true
 TARGET_ENABLE_BLUR := false
 TARGET_SUPPORTS_QUICK_TAP := true
