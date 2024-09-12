@@ -13,7 +13,7 @@ rm -rf hardware/google/pixel/kernel_headers/Android.bp
 rm -rf hardware/lineage/compat/Android.bp
 
 # Kernel & Vendor Sources
-git clone https://github.com/ofcsayan/vendor_xiaomi_spes -b 14 vendor/xiaomi/spes --depth=1 
+git clone https://github.com/spesmynuts/vendor_xiaomi_spes -b 14 vendor/xiaomi/spes --depth=1 
 git clone https://github.com/KrustyCook/android_kernel_xiaomi_sm6225 -b lineage-20 kernel/xiaomi/sm6225 --depth=1
 
 # Sepolicy fix for imsrcsd
