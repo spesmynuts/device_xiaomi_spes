@@ -14,7 +14,11 @@ rm -rf hardware/lineage/compat/Android.bp
 
 # Kernel & Vendor Sources
 git clone https://github.com/spesmynuts/vendor_xiaomi_spes -b 14 vendor/xiaomi/spes --depth=1 
+<<<<<<< HEAD
 git clone git clone https://github.com/TheMatheusDev/android_kernel_xiaomi_sm6225-2.git kernel/xiaomi/sm6225 --depth=1
+=======
+git clone https://github.com/KrustyCook/android_kernel_xiaomi_sm6225 -b master kernel/xiaomi/sm6225 --depth=1
+>>>>>>> origin
 
 # Sepolicy fix for imsrcsd
 echo -e "${color}Switch back to legacy imsrcsd sepolicy${end}"
@@ -24,6 +28,5 @@ cp device/qcom/sepolicy_vndr/legacy-um/qva/vendor/bengal/legacy-ims/hal_rcsservi
 # LineageOS Hardware
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-21 hardware/xiaomi
 
-
-# MIUI Camera
-git clone https://gitlab.com/ItzDFPlayer/vendor_xiaomi_miuicamera -b leica-5.0 vendor/xiaomi/miuicamera
+# JamesDSP
+git clone https://github.com/Arijit78/packages_apps_JamesDSPManager.git packages/apps/JamesDSPManager --depth=1
