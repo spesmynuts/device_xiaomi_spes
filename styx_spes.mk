@@ -26,6 +26,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Boot animaton
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Flags
+WITH_GMS := true
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
@@ -34,5 +37,8 @@ BUILD_FINGERPRINT := "Redmi/spes/spes:13/TKQ1.221114.001/V14.0.5.0.TGCINXM:user/
 
 PRODUCT_SYSTEM_NAME := spes_global
 PRODUCT_SYSTEM_DEVICE := spes
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b78e545 (spes: Changed kernel to Antennae, Dropped MIUI Camera & Attempt to include GAPPS)
