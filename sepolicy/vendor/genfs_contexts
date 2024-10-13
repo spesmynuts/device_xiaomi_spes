@@ -85,7 +85,6 @@ genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup                       
 genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup/wakeup                                                                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:ant_check_div/power/wakeup                                                                    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup                                                                          u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup/wakeup                                                                   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms/wakeup                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-charger/wakeup/wakeup                                           u:object_r:sysfs_wakeup:s0
@@ -232,8 +231,6 @@ genfscon sysfs /devices/virtual/input/input1/wakeup                             
 genfscon sysfs /devices/platform/soc/4e00000.ssusb/4e00000.dwc3/udc/4e00000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0
 genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup                                                                                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:ant_check/power/wakeup                                                                                                                      u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup                                                                                                                        u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:ant_check_div/power/wakeup                                                                                                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1610000.qcom,msm-eud/power/wakeup                                                                                                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/va-macro/va_swr_ctrl/power/wakeup  u:object_r:sysfs_wakeup:s0
@@ -275,7 +272,6 @@ genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup/wakeup            
 genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup/wakeup                                                                                                                     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup1 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/wakeup/wakeup[0-9]+ u:object_r:sysfs_wakeup:s0
->>>>>>> 4f556b84 (spes: selinux: Cleanup fpc fingerprint wakeup labels)
 
 # vibrate
 genfscon sysfs /devices/platform/soc/soc:pwm_vibrator/leds/vibrator/activate                                                                                                         u:object_r:sysfs_leds:s0
